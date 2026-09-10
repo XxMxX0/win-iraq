@@ -91,8 +91,17 @@
 </script>
 
 <span class="logo">
-  <svg viewBox="0 0 24 24" width="40" height="40" fill="#ff7a00">
-    <path d="M12 2C8.13 2 5 5.13 5 8c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+  <!-- 🧡 الدبوس الجديد: نصفان + حد فاصل + هالة حادة -->
+  <svg viewBox="0 0 100 100" width="44" height="44" style="filter: drop-shadow(0 0 5px rgba(255,122,0,.95)) drop-shadow(0 0 12px rgba(255,122,0,.6));">
+    <defs>
+      <clipPath id="plogo-l"><rect x="0" y="0" width="50" height="100"/></clipPath>
+      <clipPath id="plogo-r"><rect x="50" y="0" width="50" height="100"/></clipPath>
+      <path id="plogo" d="M 50 10 C 33.43 10 20 23.43 20 40 C 20 62.5 50 90 50 90 C 50 90 80 62.5 80 40 C 80 23.43 66.57 10 50 10 Z M 50 52 C 43.37 52 38 46.63 38 40 C 38 33.37 43.37 28 50 28 C 56.63 28 62 33.37 62 40 C 62 46.63 56.63 52 50 52 Z" fill-rule="evenodd"/>
+    </defs>
+    <use href="#plogo" fill="none" stroke="#ff7a00" stroke-width="7" opacity=".85"/>
+    <use href="#plogo" fill="#0d0d0d" stroke="#0d0d0d" stroke-width="2.5" clip-path="url(#plogo-l)"/>
+    <use href="#plogo" fill="#f27d0c" clip-path="url(#plogo-r)"/>
+    <line x1="50" y1="10" x2="50" y2="52" stroke="#0d0d0d" stroke-width="3"/>
   </svg>
 </span>
 
@@ -102,8 +111,16 @@
 <div class="coords" id="coords"></div>
 
 <a class="btn btn-app" id="btnApp">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="#0d0d0d">
-    <path d="M12 2C8.13 2 5 5.13 5 8c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+  <svg viewBox="0 0 100 100" width="24" height="24">
+    <defs>
+      <clipPath id="pbtn-l"><rect x="0" y="0" width="50" height="100"/></clipPath>
+      <clipPath id="pbtn-r"><rect x="50" y="0" width="50" height="100"/></clipPath>
+      <path id="pbtn" d="M 50 10 C 33.43 10 20 23.43 20 40 C 20 62.5 50 90 50 90 C 50 90 80 62.5 80 40 C 80 23.43 66.57 10 50 10 Z M 50 52 C 43.37 52 38 46.63 38 40 C 38 33.37 43.37 28 50 28 C 56.63 28 62 33.37 62 40 C 62 46.63 56.63 52 50 52 Z" fill-rule="evenodd"/>
+    </defs>
+    <use href="#pbtn" fill="#0d0d0d" clip-path="url(#pbtn-l)"/>
+    <use href="#pbtn" fill="#0d0d0d" clip-path="url(#pbtn-r)" opacity="0"/>
+    <use href="#pbtn" fill="none" stroke="#0d0d0d" stroke-width="6"/>
+    <line x1="50" y1="10" x2="50" y2="52" stroke="#0d0d0d" stroke-width="3"/>
   </svg>
   افتح في وين بالعراق
 </a>
